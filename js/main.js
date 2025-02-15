@@ -29,9 +29,9 @@ empresa.procesarPersonal(empleado3);
 empresa.procesarPersonal(empleado4);
 empresa.procesarPersonal(empleado5);
 
-alert (`${empleado1.nombre} tiene un aumento de ${empleado1.sueldo * empresa.porcObrero}$`);
-alert (`${empleado2.nombre} tiene un aumento de ${empleado2.sueldo * empresa.porcObrero}$`);
-alert (`${empleado3.nombre} tiene un aumento de ${empleado3.sueldo * empresa.porcAdmin}$`);
-alert (`${empleado4.nombre} tiene un aumento de ${empleado4.sueldo * empresa.porcObrero}$`);
-alert (`${empleado5.nombre} tiene un aumento de ${empleado5.sueldo * empresa.porcAdmin}$`);
-alert (`El total de monto adicional que debe pagar la empresa es de ${empresa.montoTotalAdicional()}$`);
+salida.innerHTML = `${empleado1.nombre} tiene un aumento de ${empleado1.calcularAumento()}$
+<br>${empleado2.nombre} tiene un aumento de ${empleado2.calcularAumento()}$
+<br>${empleado3.nombre} tiene un aumento de ${empleado3.calcularAumento()}$
+<br>${empleado4.nombre} tiene un aumento de ${empleado4.calcularAumento()}$
+<br>${empleado5.nombre} tiene un aumento de ${empleado5.calcularAumento()}$
+<br>El total de monto adicional que debe pagar la empresa es de ${empresa.montoTotalAdicional()}$`;

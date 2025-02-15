@@ -17,9 +17,17 @@ export default class Cl_personal {
         return this._tipoPersonal;
     }
     set sueldo(sueldo) {
-        this._sueldo = sueldo;
+        this._sueldo = +sueldo;
     }
     get sueldo() {
         return this._sueldo;
+    }
+    calcularAumento() {
+        if (this._tipoPersonal == "obrero") {
+            return this._sueldo * 0.2;
+        }
+        if (this._tipoPersonal == "administrativo") {
+            return this._sueldo * 0.1;
+        }
     }
 }
